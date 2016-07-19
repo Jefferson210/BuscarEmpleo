@@ -1,0 +1,28 @@
+/*=================CABEZERA=========================*/
+
+.social_logo {
+    width: 30px;
+    height: 30px;
+}
+.navbar-brand{
+    width: 270px;
+}
+.navbar-brand img{
+    width: auto;
+}
+.navbar-nav{
+    padding-top: 10px;
+    position: relative;
+    float: right;
+}
+
+@media screen and (max-width: 333px) {
+    .navbar-brand{
+        width: 150px;
+    }
+}
+@media screen and (max-width: 200px) {
+    .navbar-brand{
+        width: 100px;
+    }
+}

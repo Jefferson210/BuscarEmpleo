@@ -38,43 +38,94 @@
             </div>    
         </div>
         <!--   Fin cabecera  -->
+
+        <!--   Filtros-->
         <div class="row" ng-controller="sliderBarCtrl">
             <div class="col-md-10 col-md-offset-1">
                 <center><h1 class="title">Encuetra los Mejores Candidatos</h1></center>
-                <form class="form-horizontal">
-                   
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Nivel de Estudio/Educación {{demo6.valueA}}<div range-slider min="0" max="100" model-min="0" model-max="demo6.valueA" pin-handle="min" disabled="false"></div></label>                           
+                <form class="form-horizontal">                   
+                    <div class="form-group">
+                        <label class="col-md-6 control-label"><input type="checkbox">Nivel de Estudio/Educación {{educacion.max_value}}</label>                            
+                        <div class="col-md-6">
+                            <div class="rangeSlider" range-slider min="0" max="100" model-min="0" model-max="educacion.max_value" pin-handle="min" disabled="false"></div>                           
+                        </div>
+
                     </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Cursos</label>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label"><input type="checkbox">Cursos</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control form_inputs">
+                        </div>                        
                     </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Experiencia Laboral</label>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label"><input type="checkbox">Experiencia Laboral {{exp_laboral.max_value}}</label>
+                        <div class="col-md-6">
+                            <div class="rangeSlider" range-slider min="0" max="100" model-min="0" model-max="exp_laboral.max_value" pin-handle="min" disabled="false"></div>
+                        </div>                                                   
                     </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Jornada de Trabajo</label>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label"><input type="checkbox">Jornada de Trabajo</label>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select class="form-control form_inputs" id="jornada_job">
+                                    <option>Fines de semana</option>
+                                    <option>Tiempo completo</option>
+                                    <option>Medio tiempo</option>
+                                    <option>Por horas</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Categoria</label>
+                    <div class="form-group">
+                        <label class="col-md-6 control-label"><input type="checkbox">Categoria</label>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <select class="form-control form_inputs">
+                                    <option>Fines de semana</option>
+                                    <option>Tiempo completo</option>
+                                    <option>Medio tiempo</option>
+                                    <option>Por horas</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Edad</label>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label"><input type="checkbox">Edad</label>
+                        <div class="col-md-3">
+                            <label class="col-md-3 control-label">Desde</label>
+                            <div class="form-group" id="min_edad">
+                                <select class="form-control form_inputs" >
+                                    <option  ng-repeat="edad in min_edad">{{edad}}</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="col-md-3 control-label">Hasta</label>
+                            <div class="form-group" id="max_edad">
+                                <select class="form-control form_inputs" >
+                                    <option  ng-repeat="edad in max_edad">{{edad}}</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Ubicación</label>
+
+                    <div class="form-group">
+                        <label class="col-md-6 control-label"><input type="checkbox">Ubicación</label>
+                        <div class="col-md-6">
+                            <div class="form-group" id="ubicacion">
+                                <select class="form-control form_inputs" >
+                                    <option ng-repeat="lugar in ubicacion">{{lugar}}</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
             </div>
+
         </div>
+        <!--   Fin Filtros-->
 
         <!--    SCRIPT-->
         <script src="js/jquery.js"></script> 
@@ -83,6 +134,6 @@
         <script src="js/modulos/app.js"></script>
         <script src="js/controladores/sliderBarCtrl.js"></script>               
         <script src="js/bootstrap.min.js"></script>
-        
+
     </body>
 </html>

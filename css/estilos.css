@@ -27,26 +27,20 @@
     }
 }
 
+<<<<<<< HEAD
+
+.glyphicon.glyphicon-user{
+
+    font-size: 70px;
+}
+.glyphicon.glyphicon-plus-sign{
+
+    font-size: 30px;
+=======
 .rangeSlider {
     width: 200px;
 }
 .form_inputs{
    width: 200px; 
-}
-
-/*=====================RESULTADOS FILTRO===========================*/
-.imgPerfil{
-    width: 150px;
-}
-.perfil{
-    margin-top: 10px;
-}
-#btnfiltros{
-    margin-top: 5%;
-}
-.card{
-    height: 575px;
-}
-.glyphicon{
-    float: right;
+>>>>>>> 6ab3ce527173793364de4c80bcca16e9225181cd
 }

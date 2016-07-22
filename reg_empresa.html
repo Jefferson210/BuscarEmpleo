@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>BuscarEmpleo.com</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/angular.rangeSlider.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1 class="text-primary col-md-offset-5">Registro Empresa</h1>
+    <br><br>
+
+    <div id="cuerpo">
+
+      <div class="row">     
+
+        <div class="col-md-4 col-md-offset-4">
+
+          <form id="registro">
+
+            <div class="form-group">
+                <label for="nombre_empresa">Nombre Empresa</label>
+                <input type="text" name="nombre_empresa" class="form-control" id="nombre_empresa" placeholder="Nombre Empresa">
+            </div>
+
+            <div class="form-group">
+                <label for="años">Años Existencia</label>
+                <input type="text" name="años" class="form-control" id="años" placeholder="Años de Existencia">
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo</label>
+                <input type="text" name="correo" class="form-control" id="correo" placeholder="Correo">
+            </div>
+            
+            <div class="form-group">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" name="contraseña" class="form-control" id="contraseña" placeholder="Contraseña">
+            </div>
+
+            <div class="form-group">
+                <label for="conf_contraseña">Confirmación Contraseña</label>
+                <input type="password" name="conf_contraseña" class="form-control" id="conf_contraseña" placeholder="Confirme Contraseña">
+            </div>
+
+            <div class="form-group">
+                <label for="logo">Logo</label>
+                <button type="submit"class="btn" id="btnRegistro">Buscar</button>
+            </div>
+
+            <div>
+                <center><button type="submit"class="btn btn-primary " id="btnRegistro">Siguiente</button>
+            </div>
+
+          </form>  
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="js/jquery.js"></script> 
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular.rangeSlider.js"></script>
+  <script src="js/modulos/app.js"></script>
+  <script src="js/controladores/sliderBarCtrl.js"></script>               
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

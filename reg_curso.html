@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>BuscarEmpleo.com</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/angular.rangeSlider.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1 class="text-primary col-md-offset-5">Cursos Adicionales</h1>
+    <br><br>
+
+    <div id="cuerpo">
+
+      <div class="row">     
+
+        <div class="col-md-4 col-md-offset-4">
+
+          <form id="registro">
+
+            <div class="form-group">
+                <label for="curso">Curso</label>
+                <input type="text" name="curso" class="form-control" id="curso" placeholder="Curso">
+            </div>
+
+            <h2 class="text-primary col-md-offset-1">Nivel de Conocimiento</h2>
+
+            <div class="form-group" id="min_edad">
+                
+                <select class="form-control form_inputs" >
+                    <option>Seleccione...</option>
+                    <option>Bascio</option>
+                    <option>Intermedio</option>
+                    <option>Avanzado</option>
+                </select>
+            </div>
+
+            <div>
+                <center><button type="submit"class="btn btn-primary " id="btnRegistro">Siguiente</button>
+            </div>
+
+          </form>  
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="js/jquery.js"></script> 
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular.rangeSlider.js"></script>
+  <script src="js/modulos/app.js"></script>
+  <script src="js/controladores/sliderBarCtrl.js"></script>               
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

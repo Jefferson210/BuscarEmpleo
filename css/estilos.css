@@ -33,3 +33,20 @@
 .form_inputs{
    width: 200px; 
 }
+
+/*=====================RESULTADOS FILTRO===========================*/
+.imgPerfil{
+    width: 150px;
+}
+.perfil{
+    margin-top: 10px;
+}
+#btnfiltros{
+    margin-top: 5%;
+}
+.card{
+    height: 575px;
+}
+.glyphicon{
+    float: right;
+}

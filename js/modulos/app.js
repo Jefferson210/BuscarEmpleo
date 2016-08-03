@@ -11,7 +11,8 @@ app.config(function($stateProvider, $urlRouterProvider){
     })
     .state('filtro', {
         url:"/filtro",
-        templateUrl:"rutas/filtro.html"
+        templateUrl:"rutas/filtro.html",
+        controller:"filtrosCtrl"
     }) 
     .state('info', {
         url:"/info/:idPerfil",

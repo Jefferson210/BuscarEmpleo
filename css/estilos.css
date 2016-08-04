@@ -27,6 +27,7 @@
     }
 }
 
+
 <<<<<<< HEAD
 
 .glyphicon.glyphicon-user{
@@ -36,11 +37,22 @@
 .glyphicon.glyphicon-plus-sign{
 
     font-size: 30px;
+}
 =======
 .rangeSlider {
     width: 200px;
 }
 .form_inputs{
-   width: 200px; 
->>>>>>> 6ab3ce527173793364de4c80bcca16e9225181cd
+    width: 200px; 
+    >>>>>>> 6ab3ce527173793364de4c80bcca16e9225181cd
+}
+.imgPerfil{
+    width: 80%;
+    height: 80%;
+    margin-top: 10px;        
+    margin-bottom:  10px;        
+}
+#img_perfil{
+    width: 25%;
+    height: 25%;
 }

@@ -4,11 +4,6 @@ app.config(function($stateProvider, $urlRouterProvider){
     //lamamr a la vista
     $urlRouterProvider.otherwise('/index');
     $stateProvider   
-    .state('resultados', {
-        url:"/resultados",
-        templateUrl:"rutas/resultados.html",
-        controller:"resultadosCtrl"
-    })
     .state('filtro', {
         url:"/filtro",
         templateUrl:"rutas/filtro.html",

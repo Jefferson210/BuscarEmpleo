@@ -14,4 +14,48 @@ app.config(function($stateProvider, $urlRouterProvider){
         templateUrl:"rutas/datosPerfil.html",
         controller:"datosPerfilCtrl"
     }) 
+    .state('personal', {
+        url:"/personal/:idPerfil",
+        views:{
+            "viewA":{templateUrl:"rutas/datosPerfil.html",
+                    controller:"datosPerfilCtrl"},
+            "viewB":{
+                    templateUrl:"rutas/infoPersonal.html",
+                    controller:"datosPerfilCtrl"
+            }
+        }
+    }) 
+     .state('academicos', {
+        url:"/academicos/:idPerfil",
+        views:{
+            "viewA":{templateUrl:"rutas/datosPerfil.html",
+                    controller:"datosPerfilCtrl"},
+            "viewB":{
+                    templateUrl:"rutas/infoAcademicos.html",
+                    controller:"datosPerfilCtrl"
+            }
+        }
+    }) 
+    .state('cursos', {
+        url:"/cursos/:idPerfil",
+        views:{
+            "viewA":{templateUrl:"rutas/datosPerfil.html",
+                    controller:"datosPerfilCtrl"},
+            "viewB":{
+                    templateUrl:"rutas/infoCursos.html",
+                    controller:"datosPerfilCtrl"
+            }
+        }
+    }) 
+    .state('laboral', {
+        url:"/laboral/:idPerfil",
+        views:{
+            "viewA":{templateUrl:"rutas/datosPerfil.html",
+                    controller:"datosPerfilCtrl"},
+            "viewB":{
+                    templateUrl:"rutas/infoLaboral.html",
+                    controller:"datosPerfilCtrl"
+            }
+        }
+    }) 
 });

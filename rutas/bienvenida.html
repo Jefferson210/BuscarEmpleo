@@ -1,0 +1,58 @@
+
+    <h1 class="col-lg-offset-4 col-xs-offset-2">Bienvenido {{perfil.nombres}} {{perfil.apellidos}}</h1>
+     <nav class="navbar navbar-default">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="images/logo.png" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <div class="dropdown">
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              CV
+                                              <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                              <li><a ui-sref="FBachillerato">CREAR</a></li>
+                                              <li><a ui-sref="vercv">VER</a></li>
+                                              <li><a ui-sref="editarcv">EDITAR</a></li>
+                                            </ul>
+                                          </div></li>
+                           
+                           
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav> 
+
+           <div class="container">
+       <div class="row">
+
+        
+        
+         <h1><div class="text-center"><img src="images/juan.jpeg" alt="..." class="img-thumbnail"></div></h1><br><br>
+       
+
+         <label class="col-lg-offset-2"><h1>Informacion:</h1></label><br>
+         <label class="col-lg-offset-5"><h2>{{perfil.nombres}} {{perfil.apellidos}}</h2></label><br>
+           <label class="col-lg-offset-5"><h2>{{perfil.estado_civil}}</h2></label>
+          <label class="col-lg-offset-5"><h2>{{perfil.fecha_de_nacimiento}}</h2></label><br>
+          <label class="col-lg-offset-5"><h2>{{perfil.correo}}</h2></label><br>
+           <label class="col-lg-offset-5"><h2>{{perfil.telefono}}</h2></label>
+        
+
+ 
+
+    </div>
+
+
+       </div>

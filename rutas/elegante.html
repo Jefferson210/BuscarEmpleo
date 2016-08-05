@@ -1,0 +1,107 @@
+<nav class="navbar navbar-default">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="images/logo.png" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <div class="dropdown">
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                              ELEGIR PLANTILLA
+                                              <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                              <li><a ui-sref="elegante">ELEGANTE</a></li>
+                                              <li><a ui-sref="deporte">DEPORTE</a></li>
+                                              <li><a ui-sref="natural">NATURAL</a></li>
+                                            </ul>
+                                          </div></li>
+                         
+                           
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav> 
+
+           <div class="container" style="background-image: url(http://localhost/A/BuscarEmpleo/images/elegante.jpg);
+
+
+          no-repeat center center fixed;
+        background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+
+color:white;
+
+            ">
+       <div class="row">
+
+        
+        <div class="col-md-5">
+        	
+        	 <h1><div class="text-left"><img src="images/juan.jpeg" alt="..." class="img-thumbnail"></div></h1>
+        </div>
+        
+        
+       <div class="col-md-7">
+
+        
+         <label class=""><h2><label><h2>Nombres y Apellidos:</h2></label>{{perfil.nombres}} {{perfil.apellidos}}</h2></label>
+          
+           <label class=""><h2><label><h2>Estado Civil:</h2></label>{{perfil.estado_civil}}</h2></label>
+             
+
+          <label class=""><h2><label><h2>Fecha de nacimiento:</h2></label>{{perfil.fecha_de_nacimiento}}</h2></label>
+        
+
+
+          <label class=""><h2><label><h2>Correo::</h2></label>{{perfil.correo}}</h2></label><br>
+            
+           <label class=""><h2><label><h2>Telefono:</h2></label>{{perfil.telefono}}</h2></label>
+ 
+
+    </div>
+
+
+       </div>
+
+       <div class="row">
+
+		<label><h1>Educacion Secundaria:</h1></label><br>
+		<div class="col-md-offset-3">
+       <label class=""><h2><label><h2>Colegio: </h2></label> {{informacion.bachillerato}}</h2></label><br>
+       <label class=""><h2><label><h2>Titulo Obtenido: </h2></label> {{informacion.tituloB}}</h2></label><br>
+       <label class=""><h2><label><h2>Periodo: </h2></label> {{informacion.periodoB}}</h2></label><br>
+       	</div>
+       	<label><h1>Educacion Superior:</h1></label><br>
+		<div class="col-md-offset-3">
+       <label class=""><h2><label><h2>Institucion: </h2></label> {{informacion.universidad}}</h2></label><br>
+       <label class=""><h2><label><h2>Titulo Obtenido: </h2></label> {{informacion.tituloU}}</h2></label><br>
+       <label class=""><h2><label><h2>Periodo: </h2></label> {{informacion.periodoU}}</h2></label><br>
+       	</div>
+       	<label><h1>Experiencia Laboral:</h1></label><br>
+		<div class="col-md-offset-3">
+       <label class=""><h2><label><h2>Empresa: </h2></label> {{informacion.Empresa}}</h2></label><br>
+       <label class=""><h2><label><h2>Cargo: </h2></label> {{informacion.cargo}}</h2></label><br>
+       <label class=""><h2><label><h2>Periodo: </h2></label> {{informacion.periodoE}}</h2></label><br>
+       	</div>
+       	<label><h1>Cursos Adicionales:</h1></label><br>
+		<div class="col-md-offset-3">
+       <label class=""><h2><label><h2>Curso: </h2></label> {{informacion.curso}}</h2></label><br>
+       <label class=""><h2><label><h2>Nivel: </h2></label> {{informacion.nivel}}</h2></label><br>
+      
+       	</div>
+
+       </div>
+        <h1 class="text-right"><span class="glyphicon glyphicon-floppy-saved" ui-sref="bienvenida" title="finalizar"></span>
+       </div>

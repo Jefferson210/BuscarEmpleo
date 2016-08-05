@@ -27,20 +27,28 @@
     }
 }
 
-<<<<<<< HEAD
+
 
 .glyphicon.glyphicon-user{
 
     font-size: 70px;
 }
-.glyphicon.glyphicon-plus-sign{
+.glyphicon.glyphicon-plus-sign,.glyphicon.glyphicon-circle-arrow-left,.glyphicon.glyphicon-circle-arrow-right,.glyphicon.glyphicon-floppy-saved
+
+
+{
 
     font-size: 30px;
-=======
+
+
 .rangeSlider {
     width: 200px;
 }
 .form_inputs{
    width: 200px; 
->>>>>>> 6ab3ce527173793364de4c80bcca16e9225181cd
+}
+
+div#elegante{
+
+    color: white;
 }

@@ -2,8 +2,12 @@ var app = angular.module('buscarEmpleo', ['ui.router','ui-rangeSlider'])
 
 app.config(function($stateProvider, $urlRouterProvider){
     //lamamr a la vista
-    $urlRouterProvider.otherwise('/index');
+    $urlRouterProvider.otherwise('/inicio');
     $stateProvider   
+    .state('inicio', {
+        url:"/inicio",
+        templateUrl:"rutas/inicio.html"
+    }) 
     .state('filtro', {
         url:"/filtro",
         templateUrl:"rutas/filtro.html",
@@ -14,8 +18,6 @@ app.config(function($stateProvider, $urlRouterProvider){
         templateUrl:"rutas/datosPerfil.html",
         controller:"datosPerfilCtrl"
     }) 
-<<<<<<< HEAD
-
     .state('login', {
         url:"/login",
         templateUrl:"rutas/login.html",
@@ -121,10 +123,10 @@ app.config(function($stateProvider, $urlRouterProvider){
         controller:"bienvenidaCtrl",
         
     })  
-=======
     .state('personal', {
         url:"/personal/:idPerfil",
         views:{
+            "menuTop":{templateUrl:"rutas/menuTop.html"},
             "viewA":{templateUrl:"rutas/datosPerfil.html",
                     controller:"datosPerfilCtrl"},
             "viewB":{
@@ -136,6 +138,7 @@ app.config(function($stateProvider, $urlRouterProvider){
      .state('academicos', {
         url:"/academicos/:idPerfil",
         views:{
+             "menuTop":{templateUrl:"rutas/menuTop.html"},
             "viewA":{templateUrl:"rutas/datosPerfil.html",
                     controller:"datosPerfilCtrl"},
             "viewB":{
@@ -147,6 +150,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     .state('cursos', {
         url:"/cursos/:idPerfil",
         views:{
+             "menuTop":{templateUrl:"rutas/menuTop.html"},
             "viewA":{templateUrl:"rutas/datosPerfil.html",
                     controller:"datosPerfilCtrl"},
             "viewB":{
@@ -158,6 +162,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     .state('laboral', {
         url:"/laboral/:idPerfil",
         views:{
+             "menuTop":{templateUrl:"rutas/menuTop.html"},
             "viewA":{templateUrl:"rutas/datosPerfil.html",
                     controller:"datosPerfilCtrl"},
             "viewB":{
@@ -166,5 +171,4 @@ app.config(function($stateProvider, $urlRouterProvider){
             }
         }
     }) 
->>>>>>> 97b0149965ae2f76d0cf927d2cf17cba9e815a88
 });

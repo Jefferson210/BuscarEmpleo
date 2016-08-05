@@ -8,83 +8,23 @@
         <link rel="stylesheet" href="css/angular.rangeSlider.css">
         <link rel="stylesheet" href="css/leftMenu.css">
         <link rel="stylesheet" href="css/bootstrap-multiselect.css">
-        
-
     </head>
     <body>
-        <!--   cabecera  -->
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">
-                            <img src="images/logo.png" class="img-responsive" alt="">
-                        </a>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Cargar CV<span class="sr-only">(current)</span></a></li>
-                            <li><a href="#" ui-sref="login">Iniciar Sesión</a></li>
-                            <li><a href="#">Empresa</a></li>
-                            <li><a href="#"><img src="images/facebook_logo.jpg" class="social_logo" alt=""></a></li>
-                            <li><a href="#"><img src="images/twitter_logo.jpg" class="social_logo" alt=""></a></li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </nav> 
-            </div>    
-        </div>
-        <!--   Fin cabecera  -->
-        <!-- carrusel-->
-        <div id="contenedor">
-            <div id="myCarousel" class="carousel slide">
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                </ol>
-                <!-- Carousel items -->
-                <div class="carousel-inner">
-                    <center><div class="active item"><img  src="images/slider1.jpg" alt="BuscaEmpleo.com" /></div></center>
-                </div>
-                <!-- Carousel nav -->
-                <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-            </div>
-        </div>
-        <!-- Fin carrusel-->
-
-        <!--   Fin Filtros-->
-        <div class="form-group">
-            <center><button id="btnfiltros" type="button" class="btn btn-primary-outline btn-block"><a ui-sref="filtro"><h1>Realiza Tu Búsqueda Aquí</h1></a></button></center>                               
-        </div>
-
-
-
- 
-        <!--   Fin Filtros-->
-
-        <!--    Templates ngRoute-->
-
+        <!--    vistas-->
         <div ui-view autoscroll="true"></div>
         <div class="row">
-            <div class="col-md-offset-1">
+            <div ui-view="menuTop" autoscroll="true"></div>
+        </div>
+        <div class="container">
+            <div class="col-md-10 col-md-offset-1">
                 <div class="col-md-3" ui-view="viewA" autoscroll="true"></div>
                 <div class="col-md-7" ui-view="viewB" autoscroll="true"></div>
                 <div class="col-md-7" ui-view="viewC" autoscroll="true"></div>
             </div>
         </div>
-
-
-        <!--    Fin Templates ngRoute-->
-        <!--    SCRIPT--> 
-
-       
+        <!--   Fin vistas-->
+        
+        <!--    SCRIPT-->        
         <script src="js/jquery.js"></script> 
         <script src="js/angular.js"></script>
         <script src="js/angular-ui-router.min.js"></script>
@@ -96,15 +36,9 @@
         <script src="js/controladores/finalizadoCtrl.js"></script>                         
         <script src="js/controladores/resultadosCtrl.js"></script>               
         <script src="js/controladores/datosPerfilCtrl.js"></script> 
-
         <script src="js/bootstrap.min.js"></script>
         <script src="js/carrusel.js"></script>
         <script src="js/bootstrap-multiselect.js"></script>
-<<<<<<< HEAD
-        
-        <script src="js/multipleSelect.js"></script>
-=======
->>>>>>> 97b0149965ae2f76d0cf927d2cf17cba9e815a88
 
     </body>
 </html>

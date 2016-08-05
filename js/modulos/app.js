@@ -4,11 +4,6 @@ app.config(function($stateProvider, $urlRouterProvider){
     //lamamr a la vista
     $urlRouterProvider.otherwise('/index');
     $stateProvider   
-    .state('resultados', {
-        url:"/resultados",
-        templateUrl:"rutas/resultados.html",
-        controller:"resultadosCtrl"
-    })
     .state('filtro', {
         url:"/filtro",
         templateUrl:"rutas/filtro.html",
@@ -19,6 +14,7 @@ app.config(function($stateProvider, $urlRouterProvider){
         templateUrl:"rutas/datosPerfil.html",
         controller:"datosPerfilCtrl"
     }) 
+<<<<<<< HEAD
 
     .state('login', {
         url:"/login",
@@ -125,4 +121,50 @@ app.config(function($stateProvider, $urlRouterProvider){
         controller:"bienvenidaCtrl",
         
     })  
+=======
+    .state('personal', {
+        url:"/personal/:idPerfil",
+        views:{
+            "viewA":{templateUrl:"rutas/datosPerfil.html",
+                    controller:"datosPerfilCtrl"},
+            "viewB":{
+                    templateUrl:"rutas/infoPersonal.html",
+                    controller:"datosPerfilCtrl"
+            }
+        }
+    }) 
+     .state('academicos', {
+        url:"/academicos/:idPerfil",
+        views:{
+            "viewA":{templateUrl:"rutas/datosPerfil.html",
+                    controller:"datosPerfilCtrl"},
+            "viewB":{
+                    templateUrl:"rutas/infoAcademicos.html",
+                    controller:"datosPerfilCtrl"
+            }
+        }
+    }) 
+    .state('cursos', {
+        url:"/cursos/:idPerfil",
+        views:{
+            "viewA":{templateUrl:"rutas/datosPerfil.html",
+                    controller:"datosPerfilCtrl"},
+            "viewB":{
+                    templateUrl:"rutas/infoCursos.html",
+                    controller:"datosPerfilCtrl"
+            }
+        }
+    }) 
+    .state('laboral', {
+        url:"/laboral/:idPerfil",
+        views:{
+            "viewA":{templateUrl:"rutas/datosPerfil.html",
+                    controller:"datosPerfilCtrl"},
+            "viewB":{
+                    templateUrl:"rutas/infoLaboral.html",
+                    controller:"datosPerfilCtrl"
+            }
+        }
+    }) 
+>>>>>>> 97b0149965ae2f76d0cf927d2cf17cba9e815a88
 });

@@ -28,6 +28,10 @@
 }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 97b0149965ae2f76d0cf927d2cf17cba9e815a88
 
 .glyphicon.glyphicon-user{
 
@@ -39,16 +43,39 @@
 {
 
     font-size: 30px;
+<<<<<<< HEAD
 
 
+=======
+}
+=======
+>>>>>>> 97b0149965ae2f76d0cf927d2cf17cba9e815a88
 .rangeSlider {
     width: 200px;
 }
 .form_inputs{
+<<<<<<< HEAD
    width: 200px; 
 }
 
 div#elegante{
 
     color: white;
+=======
+    width: 200px; 
+    >>>>>>> 6ab3ce527173793364de4c80bcca16e9225181cd
+}
+.imgPerfil{
+    width: 80%;
+    height: 80%;
+    margin-top: 10px;        
+    margin-bottom:  10px;        
+}
+#img_perfil{
+    width: 25%;
+    height: 25%;
+}
+.labels{
+    font-weight: bold;
+>>>>>>> 97b0149965ae2f76d0cf927d2cf17cba9e815a88
 }

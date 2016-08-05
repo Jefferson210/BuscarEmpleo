@@ -5,27 +5,29 @@
         <center>
             <form class="form-horizontal">                   
                 <div class="form-group">
-                    <label class="col-md-6 control-label"><input type="checkbox">Nivel de Estudio/Educación</label>  
+                    <label class="col-md-6 control-label">Nivel de Estudio/Educación</label>  
                     <div class="col-md-3">
                         <div class="form-group" id="educacion">
-                            <select id="nivel_educacion" class="form-control form_inputs" multiple="multiple">
-                                <!--                                <option ng-repeat="nivel in educacion" value="{{nivel}}">{{nivel}}</option>-->
+                            <select id="nivel_educacion" class="form-control form_inputs" multiple="multiple" ng-model="filtro.estudios">
+                                                             
+                                <!--<option ng-repeat="nivel in educacion" value="{{nivel}}">{{nivel}}</option>-->
                                 <option>Bachiller</option>
                                 <option>Licenciado</option>
                                 <option>Tecnólogo</option>
                                 <option>Ingeniero</option>
                                 <option>Master</option>
                                 <option>PHD</option>
+                                <option>universitario</option>
                             </select>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="col-md-6 control-label"><input type="checkbox">Cursos</label>
+                    <label class="col-md-6 control-label">Cursos</label>
                     <div class="col-md-3">
                         <div class="form-group">
-                            <select id="cursos" class="form-control form_inputs" multiple="multiple">
+                            <select id="cursos" class="form-control form_inputs" multiple="multiple" ng-model="filtro.cursos">
                                 <option>Desarrollo Humanoy Gerencial</option>
                                 <option>Ventas y Servicio al Cliente</option>
                                 <option>Administracion Estadistica Aplicada</option>
@@ -33,23 +35,23 @@
                                 <option>Redes</option>
                                 <option>Seguridad en Redes</option>
                                 <option>Programacion</option>
-                                <option>Desarrollo WeB/Movil</option>
+                                <option>Desarrollo WeB</option>
                                 <option>Ofimática</option>
                             </select>
                         </div>
                     </div>                       
                 </div>
                 <div class="form-group">
-                    <label class="col-md-6 control-label"><input type="checkbox">Experiencia Laboral {{exp_laboral.max_value}} años</label>
-                    <div class="col-md-3">
+                    <label class="col-sm-4 col-md-6 control-label">Experiencia Laboral {{exp_laboral.max_value}} años</label>
+                    <div class="col-sm-4 col-md-3">
                         <div class="rangeSlider" range-slider min="0" max="10" model-min="0" model-max="exp_laboral.max_value" pin-handle="min" disabled="false"></div>
                     </div>                                                   
                 </div>
                 <div class="form-group">
-                    <label class="col-md-6 control-label"><input type="checkbox">Jornada de Trabajo</label>   
+                    <label class="col-md-6 control-label">Jornada de Trabajo</label>   
                     <div class="col-md-3">
                         <div class="form-group">
-                            <select id="jornada_job" class="form-control form_inputs" multiple="multiple">
+                            <select id="jornada_job" class="form-control form_inputs" multiple="multiple" ng-model="filtro.jornada">
                                 <option>Fines de semana</option>
                                 <option>Tiempo completo</option>
                                 <option>Medio tiempo</option>
@@ -59,10 +61,10 @@
                     </div>    
                 </div>
                 <div class="form-group">
-                    <label class="col-md-6 control-label"><input type="checkbox">Categoria</label>
+                    <label class="col-md-6 control-label">Categoria</label>
                     <div class="col-md-3">
                         <div class="form-group">
-                            <select id="categorias" class="form-control form_inputs" multiple="multiple">
+                            <select id="categorias" class="form-control form_inputs" multiple="multiple" ng-model="filtro.categoria">
                                 <option>Ventas</option>
                                 <option>Administración</option>
                                 <option>Oficina</option>
@@ -86,11 +88,11 @@
                     </div>  
                 </div>
                 <div class="form-group">
-                    <label class="col-md-4 control-label"><input type="checkbox">Edad</label>
+                    <label class="col-md-4 control-label">Edad</label>
                     <div class="col-md-3">
                         <label class="col-md-3 control-label">Desde</label>
                         <div class="form-group" id="min_edad">
-                            <select class="form-control form_inputs" >
+                            <select class="form-control form_inputs" ng-model="filtro.minEdad">
                                 <option  ng-repeat="edad in min_edad">{{edad}}</option>
                             </select>
                         </div>
@@ -99,7 +101,7 @@
                     <div class="col-md-3">
                         <label class="col-md-3 control-label">Hasta</label>
                         <div class="form-group" id="max_edad">
-                            <select class="form-control form_inputs" >
+                            <select class="form-control form_inputs" ng-model="filtro.maxEdad">
                                 <option  ng-repeat="edad in max_edad">{{edad}}</option>
                             </select>
                         </div>
@@ -107,20 +109,35 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="col-md-6 control-label"><input type="checkbox">Ubicación</label>
+                    <label class="col-md-6 control-label">Ubicación</label>
                     <div class="col-md-3">
                         <div class="form-group" id="ubicacion">
-                            <select class="form-control form_inputs" >
+                            <select class="form-control form_inputs" ng-model="filtro.lugar">
                                 <option ng-repeat="lugar in ubicacion">{{lugar}}</option>
                             </select>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <center><button type="button" class="btn btn-default"><a ui-sref="resultados">Buscar</a></button></center>                               
-                </div>
             </form>
         </center>                
     </div>
-
+    <!--    RESULTADOS-->
+    <div class="panel panel-default col-md-8 col-md-offset-2">
+        <div class="panel-body">
+            <br/>
+            <div class="panel-heading"><center><h1>Resultados</h1></center></div>
+            <!--            Search: <input ng-model="searchText">-->
+            <div class="row perfil" ng-repeat="perfil in candidatos | filter:filtro.estudios[0] | filter:filtro.cursos[0] | filter:filtro.jornada[0] | filter:filtro.categoria[0] | filter:filtro.minEdad[0] | filter:filtro.maxEdad[0] | filter:filtro.lugar">
+                <div class="col-md-2 col-md-offset-1">
+                    <a ui-sref="info({idPerfil: perfil.candidato.id})"><img src="{{perfil.candidato.personales.imagen}}" alt="" class="img-rounded imgPerfil"></a>
+                </div>
+                <div class="col-md-8 col-md-offset-1">
+                    <h2>{{perfil.candidato.personales.nombre}} {{perfil.candidato.personales.apellido}}</h2>                          
+                    <h4>{{perfil.candidato.personales.email}}</h4>                                            
+                    <h4>{{perfil.candidato.estudios.nivel}}</h4>                       
+                </div>
+            </div>
+        </div>
+        <!--  <div class="panel-footer">Pie del panel</div>-->
+    </div>
 </div>

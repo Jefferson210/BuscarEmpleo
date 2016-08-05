@@ -58,7 +58,7 @@
             </div>
         </div>
         <!-- Fin carrusel-->
-        
+
         <!--   Fin Filtros-->
         <div class="form-group">
             <center><button id="btnfiltros" type="button" class="btn btn-primary-outline btn-block"><a ui-sref="filtro"><h1>Realiza Tu Búsqueda Aquí</h1></a></button></center>                               
@@ -72,6 +72,14 @@
         <!--    Templates ngRoute-->
 
         <div ui-view autoscroll="true"></div>
+        <div class="row">
+            <div class="col-md-offset-1">
+                <div class="col-md-3" ui-view="viewA" autoscroll="true"></div>
+                <div class="col-md-7" ui-view="viewB" autoscroll="true"></div>
+                <div class="col-md-7" ui-view="viewC" autoscroll="true"></div>
+            </div>
+        </div>
+
 
         <!--    Fin Templates ngRoute-->
         <!--    SCRIPT--> 
@@ -92,8 +100,11 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/carrusel.js"></script>
         <script src="js/bootstrap-multiselect.js"></script>
+<<<<<<< HEAD
         
         <script src="js/multipleSelect.js"></script>
+=======
+>>>>>>> 97b0149965ae2f76d0cf927d2cf17cba9e815a88
 
     </body>
 </html>
